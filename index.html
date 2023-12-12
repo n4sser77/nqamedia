@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontaktformulär</title>
+
+</head>
+<body>
+
+  <h2>Kontaktformulär</h2>
+
+  <form id="contactForm">
+    <label for="name">Namn:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">E-post:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Meddelande:</label>
+    <textarea id="message" name="message" required></textarea>
+
+    <button type="submit">Skicka</button>
+  </form>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      // Hämta värden från formuläret
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var message = document.getElementById("message").value;
+
+      // Gör något med formulärdatan (skicka till servern, logga det, etc.)
+      console.log("Namn: " + name);
+      console.log("E-post: " + email);
+      console.log("Meddelande: " + message);
+
+      // Här kan du implementera
