@@ -10,7 +10,10 @@ app.use(bodyParser.json());
 app.post('/submit-form', (req, res) => {
   const { name, email, message } = req.body;
 
-  // You can handle the form data here (send emails, save to a database, etc.)
+  // Log the raw request body
+  console.log('Raw request body:', req.body);
+
+  // Log the individual form fields
   console.log('Received form submission:');
   console.log('Name:', name);
   console.log('Email:', email);
