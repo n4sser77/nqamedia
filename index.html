@@ -1,40 +1,26 @@
+<!-- index.html -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kontaktformulär</title>
- <link rel="stylesheet" href="style.css"
+  <title>Form Submission Example</title>
 </head>
 <body>
-
-  <h2>Kontaktformulär</h2>
-
-  <form id="contactForm" action="http://localhost:3000/submit-form" method="POST">
-    <label for="name">Namn:</label>
+  <h1>Form Submission Example</h1>
+  <form id="contactForm" action="/submit-form" method="POST">
+    <label for="name">Name:</label>
     <input type="text" id="name" name="name" required>
 
-    <label for="email">E-post:</label>
+    <label for="email">Email:</label>
     <input type="email" id="email" name="email" required>
 
-    <label for="message">Meddelande:</label>
+    <label for="message">Message:</label>
     <textarea id="message" name="message" required></textarea>
 
-    <button type="submit">Skicka</button>
+    <button type="submit">Submit</button>
   </form>
-
-  <script>
-    document.getElementById("contactForm").addEventListener("submit", function (event) {
-      event.preventDefault();
-
-      // Hämta värden från formuläret
-      var name = document.getElementById("name").value;
-      var email = document.getElementById("email").value;
-      var message = document.getElementById("message").value;
-
-      // Gör något med formulärdatan (skicka till servern, logga det, etc.)
-      console.log("Namn: " + name);
-      console.log("E-post: " + email);
-      console.log("Meddelande: " + message);
-
-      // Här kan du implementera
+  <script src="script.js"></script>
+</body>
+</html>
